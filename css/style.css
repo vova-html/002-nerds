@@ -35,6 +35,48 @@ header {
   background-color: #fb565a;
 }
 
+.red-btn {
+  background-color: #fb565a;
+}
+
+.red-btn:hover {
+  background-color: #d6494d;
+}
+
+.red-btn:active {
+  background-color: #b63538;
+}
+
+.green-btn {
+  background-color: #00ca74;
+}
+
+.green-btn:hover {
+  background-color: #01a25e;
+}
+
+.green-btn:active {
+  background-color: #009053;
+}
+
+.yellow-btn {
+  background-color: #efc84a;
+}
+
+.yellow-btn:hover {
+  background-color: #d6ae2c;
+}
+
+.yellow-btn:active {
+  background-color: #c09b24;
+}
+
+.red-btn:active,
+.green-btn:active,
+.yellow-btn:active {
+  box-shadow: inset 0 2px 0 0 rgba(0,0,0, 0.15);
+}
+
 .header-top {
   padding-top: 27px;
   padding-bottom: 32px;
@@ -79,6 +121,11 @@ header {
 
 .main-menu-item {
   width: 115px;
+}
+
+.main-menu-item.current a {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fb565a;
 }
 
 .main-menu-item a:hover {
@@ -127,7 +174,7 @@ header {
 }
 
 .header-slider {
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   margin-bottom: 80px;
 }
 
@@ -141,6 +188,7 @@ header {
   min-height: 260px;
   padding-top: 40px;
   padding-right: 410px;
+  padding-bottom: 20px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -149,7 +197,24 @@ header {
   background-repeat: no-repeat;
 }
 
-.slider-content[data-value="1"] {
+.slider-content.current,
+.slider-content.active {
+  display: block;
+}
+
+.slider-content.active[data-number="1"] {
+  background-position: right -25px;
+}
+
+.slider-content.active[data-number="2"] {
+  background-position: right -330px;
+}
+
+.slider-content.active[data-number="3"] {
+  background-position: right -641px;
+}
+
+.slider-content.active ~ .slider-control {
   display: block;
 }
 
@@ -171,11 +236,14 @@ header {
 }
 
 .slider-control {
+  display: none;
   position: absolute;
   left: 416px;
-  bottom: 73px;
-  /*width: 50px;*/
-  /*background-color: #bbb;*/
+  bottom: 93px;
+}
+
+.slider-control .control-btn.active {
+  cursor: default;
 }
 
 .control-btn {
@@ -189,7 +257,7 @@ header {
   cursor: pointer;
 }
 
-.control-btn[data-value="1"] {
+.control-btn.active {
   background-color: #c1c1c1;
 }
 
@@ -241,14 +309,6 @@ header {
   background-position: -500px 0;
 }
 
-.shop-item.apps .btn {
-  background-color: #00ca74;
-}
-
-.shop-item.cast .btn {
-  background-color: #efc84a;
-}
-
 .studio {
   margin-top: 60px;
   margin-bottom: 55px;
@@ -280,7 +340,7 @@ header {
 
 .about-title {
   margin-top: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 36px;
   line-height: 36px;
@@ -300,6 +360,7 @@ header {
   left: 50%;
   top: 50%;
   padding: 0 15px;
+  text-transform: uppercase;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -307,6 +368,9 @@ header {
 .about-header {
   margin-top: 25px;
   margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .about-item {
@@ -440,8 +504,8 @@ header {
   float: left;
   width: 320px;
   height: 63px;
+  margin-top: 3px;
   font-size: 0;
-  /*outline: 1px solid red;*/
 }
 
 .social-btn {
@@ -458,15 +522,24 @@ header {
 }
 
 .social-btn.btn-vk {
-  background-position: 15px 1px;
+  background-position: 16px 1px;
 }
 
 .social-btn.btn-fb {
-  background-position: 15px -65px;
+  background-position: 16px -65px;
 }
 
 .social-btn.btn-ig {
-  background-position: 15px -132px;
+  background-position: 16px -130px;
+}
+
+.social-btn:hover {
+  background-color: #fb565a;
+}
+
+.social-btn:active {
+  background-color: #d6494d;
+  box-shadow: inset 0 2px 0 0 rgba(0,0,0, 0.15);
 }
 
 .discount h2,

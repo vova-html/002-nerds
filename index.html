@@ -20,7 +20,7 @@
             <ul>
               <li class="main-menu-item"><a href="#">Студия</a></li>
               <li class="main-menu-item"><a href="#">Клиенты</a></li>
-              <li class="main-menu-item"><a href="#">Магазин</a></li>
+              <li class="main-menu-item current"><a href="#">Магазин</a></li>
               <li class="main-menu-item"><a href="#">Контакты</a></li>
             </ul>
             <div class="basket">
@@ -32,25 +32,25 @@
 
       <div class="header-slider">
         <div class="wrapper">
-          <div class="slider-content" data-value="1">
+          <div class="slider-content current" data-number="1">
             <b>Долго, дорого,<br>скрупулезно.</b>
             <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
-            <a class="slider-btn btn" href="#">Узнать больше</a>
+            <a class="slider-btn red-btn btn" href="#">Узнать больше</a>
           </div>
-          <div class="slider-content" data-value="2">
+          <div class="slider-content" data-number="2">
             <b>Любите ли вы математику, как любим ее мы?</b>
             <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать</p>
-            <a class="slider-btn btn" href="#">Узнать больше</a>
+            <a class="slider-btn red-btn btn" href="#">Узнать больше</a>
           </div>
-          <div class="slider-content" data-value="3">
+          <div class="slider-content" data-number="3">
             <b>Только наркотики,<br>только хардкор!</b>
             <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
-            <a class="slider-btn btn" href="#">Узнать больше</a>
+            <a class="slider-btn red-btn btn" href="#">Узнать больше</a>
           </div>
           <div class="slider-control">
-            <div class="control-btn" data-value="1"></div>
-            <div class="control-btn" data-value="2"></div>
-            <div class="control-btn" data-value="3"></div>
+            <div class="control-btn active" data-number="1"></div>
+            <div class="control-btn" data-number="2"></div>
+            <div class="control-btn" data-number="3"></div>
           </div>
         </div>
       </div>
@@ -65,17 +65,17 @@
           <div class="shop-item webs">
             <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a class="btn" href="#">Заказать</a>
+            <a class="red-btn btn" href="#">Заказать</a>
           </div>
           <div class="shop-item apps">
             <h3>Приложения</h3>
             <p>Покорите топ-10 приложений в&nbsp;AppStrore и Google Play</p>
-            <a class="btn" href="#">Заказать</a>
+            <a class="green-btn btn" href="#">Заказать</a>
           </div>
           <div class="shop-item cast">
             <h3>Презентации</h3>
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="btn" href="#">Заказать</a>
+            <a class="yellow-btn btn" href="#">Заказать</a>
           </div>
         </div>
 
@@ -107,7 +107,7 @@
             </ul>
           </div>
           <div class="about column-right">
-            <h3 class="about-header">КАК Мы работаем:</h3>
+            <h3 class="about-header">КАК МЫ работаем:</h3>
             <ul>
               <li class="about-item">С самоотдачей 146%</li>
               <li class="about-item">Соблюдая сроки на 100%</li>
@@ -136,7 +136,7 @@
           <div class="contacts-name">NЁRDS DESIGN STUDIO</div>
           <div class="contacts-adr">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
           <div class="contacts-tel">тел. +7 (812) 275-75-75</div>
-          <a class="contacts-btn btn" href="#">Напишите нам</a>
+          <a class="contacts-btn red-btn btn" href="#">Напишите нам</a>
         </div>
       </div>
     </div>
@@ -144,9 +144,9 @@
     <footer class="main-footer">
       <div class="wrapper">
         <div class="social">
-          <div class="social-btn btn-vk"></div>
-          <div class="social-btn btn-fb"></div>
-          <div class="social-btn btn-ig"></div>
+          <a class="social-btn btn-vk" href=""></a>
+          <a class="social-btn btn-fb" href=""></a>
+          <a class="social-btn btn-ig" href=""></a>
         </div>
         <div class="discount">
           <h2>Давайте дружить, это выгодно!</h2>
@@ -154,6 +154,9 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>
