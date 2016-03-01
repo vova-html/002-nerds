@@ -20,7 +20,7 @@
             <ul>
               <li class="main-menu-item"><a href="#">Студия</a></li>
               <li class="main-menu-item"><a href="#">Клиенты</a></li>
-              <li class="main-menu-item current"><a href="#">Магазин</a></li>
+              <li class="main-menu-item"><a href="catalog.html">Магазин</a></li>
               <li class="main-menu-item"><a href="#">Контакты</a></li>
             </ul>
             <div class="basket">
@@ -154,6 +154,26 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="feedback">
+        <a class="feedback-close" href="#"></a>
+        <form action="feedback.php" method="post">
+          <label class="feedback-label" data-title="Ваше имя:">
+            <input class="feedback-field" type="text" placeholder="Представьтесь, пожалуйста">
+          </label>
+          <label class="feedback-label" data-title="Ваш e-mail:">
+            <input class="feedback-field" type="email" placeholder="Для отправки ответа">
+          </label>
+          <div class="text-layout">
+            <label class="feedback-label" data-title="Текст письма:">
+              <textarea class="feedback-field text-field" placeholder="В свободной форме"></textarea>
+            </label>
+          </div>
+          <div class="text-right"><input class="feedback-btn red-btn btn" type="submit" value="Отправить"></div>
+        </form>
+      </div>
+    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/script.js"></script>

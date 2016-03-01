@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <header>
+
+      <div class="header-top">
+        <div class="wrapper">
+          <div class="logo">
+            <a href="index.html"><img src="img/logo.png" width="139" height="56" alt=""></a>
+          </div>
+          <nav class="main-menu">
+            <ul>
+              <li class="main-menu-item"><a href="#">Студия</a></li>
+              <li class="main-menu-item"><a href="#">Клиенты</a></li>
+              <li class="main-menu-item current"><a href="#">Магазин</a></li>
+              <li class="main-menu-item"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="basket">
+              <a href="#">Корзина</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header-title">
+        <div class="wrapper">
+          <h2>Добро пожаловать в магазин готовых макетов</h2>
+        </div>
+      </div>
+
+    </header>
+
+    <main>
+      <div class="wrapper filter-wrapper">
+
+        <div class="filter-main">
+          <form>
+            <div class="filter-header">СТОИМОСТЬ:</div>
+            <div class="filter-price">
+              <div class="price-scale">
+                <div class="price-bar"></div>
+              </div>
+              <div class="bar-min"></div>
+              <div class="bar-max"></div>
+            </div>
+            <label class="label-min">от</label>
+            <input type="text" name="min" value="0">
+            <label class="label-max">до</label>
+            <input type="text" name="max" value="15000">
+
+            <div class="filter-header">СЕТКА:</div>
+            <input id="grid1" type="radio" name="grid" checked>
+            <label for="grid1">Адаптивная</label>
+            <input id="grid2" type="radio" name="grid">
+            <label for="grid2">Фиксированная</label>
+            <input id="grid3" type="radio" name="grid" checked disabled>
+            <label for="grid3">Резиновая</label>
+
+            <div class="filter-header">ОСОБЕННОСТИ:</div>
+            <input id="check1" type="checkbox" checked>
+            <label for="check1">Слайдер</label>
+            <input id="check2" type="checkbox">
+            <label for="check2">Блок преимуществ</label>
+            <input id="check3" type="checkbox" checked>
+            <label for="check3">Новости</label>
+            <input id="check4" type="checkbox" checked disabled>
+            <label for="check4">Галерея</label>
+            <input id="check5" type="checkbox" disabled>
+            <label for="check5">Корзина</label>
+
+            <input class="btn-aply btn grey-btn" type="submit" value="Показать">
+          </form>
+        </div>
+
+        <div class="catalog">
+
+          <div class="catalog-sort">
+            <div class="catalog-sort-left">
+              <span class="sort-header">СОРТИРОВАТЬ:</span>
+              <a class="sort-type" href="#">по цене</a>
+              <a class="sort-type" href="#">по типу</a>
+              <a class="sort-type" href="#">по функционалу</a>
+            </div>
+            <div class="catalog-sort-right">
+              <a class="arrow-down" href="#">по убыванию</a>
+              <a class="arrow-up" href="#">по возрастанию</a>
+            </div>
+          </div>
+
+          <div class="catalog-items">
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-001.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">AVIATOR</h3>
+                <div class="item-type">Одностраничный макет с авторским дизайном</div>
+                <a class="item-btn btn red-btn" href="#">8000 Р.</a>
+              </div>
+            </div>
+
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-002.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">SUNSET</h3>
+                <div class="item-type">Интернет-магазин с&nbsp;личным кабинетом</div>
+                <a class="item-btn btn red-btn" href="#">10000 Р.</a>
+              </div>
+            </div>
+
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-003.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">FORTE</h3>
+                <div class="item-type">Отличный макет для&nbsp;личного блога</div>
+                <a class="item-btn btn red-btn" href="#">5000 Р.</a>
+              </div>
+            </div>
+
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-004.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">Modern Organic THAI</h3>
+                <div class="item-type">Сайт для ресторана быстрого питания</div>
+                <a class="item-btn btn red-btn" href="#">12000 Р.</a>
+              </div>
+            </div>
+
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-005.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">AVENUE</h3>
+                <div class="item-type">Макет для блога о&nbsp;путешествиях</div>
+                <a class="item-btn btn red-btn" href="#">8000 Р.</a>
+              </div>
+            </div>
+
+            <div class="catalog-item">
+              <a href="#"><img src="img/item-006.jpg" alt=""></a>
+              <div class="catalog-bay">
+                <h3 class="item-name">DOVETAIL</h3>
+                <div class="item-type">Интернет-магазин с&nbsp;галереей товаров</div>
+                <a class="item-btn btn red-btn" href="#">14000 Р.</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="paginator">
+            <button class="paginator-btn btn grey-btn" disabled>1</button>
+            <button class="paginator-btn btn grey-btn">2</button>
+            <button class="paginator-btn btn grey-btn">3</button>
+            <button class="paginator-btn btn grey-btn btn-next">Следующая</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <div class="map">
+      <div class="map-google" id="map-canvas"></div>
+      <div class="wrapper">
+        <div class="contacts">
+          <div class="contacts-name">NЁRDS DESIGN STUDIO</div>
+          <div class="contacts-adr">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+          <div class="contacts-tel">тел. +7 (812) 275-75-75</div>
+          <a class="contacts-btn red-btn btn" href="#">Напишите нам</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="social">
+          <a class="social-btn btn-vk" href=""></a>
+          <a class="social-btn btn-fb" href=""></a>
+          <a class="social-btn btn-ig" href=""></a>
+        </div>
+        <div class="discount">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="feedback">
+        <a class="feedback-close" href="#"></a>
+        <form action="feedback.php" method="post">
+          <label class="feedback-label" data-title="Ваше имя:">
+            <input class="feedback-field" type="text" placeholder="Представьтесь, пожалуйста">
+          </label>
+          <label class="feedback-label" data-title="Ваш e-mail:">
+            <input class="feedback-field" type="email" placeholder="Для отправки ответа">
+          </label>
+          <div class="text-layout">
+            <label class="feedback-label" data-title="Текст письма:">
+              <textarea class="feedback-field text-field" placeholder="В свободной форме"></textarea>
+            </label>
+          </div>
+          <div class="text-right"><input class="feedback-btn red-btn btn" type="submit" value="Отправить"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

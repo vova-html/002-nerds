@@ -1,26 +1,69 @@
 
+// слайд
 var activeSlide = document.querySelector(".slider-content.current");
-activeSlide.classList.remove("current");
-activeSlide.classList.add("active");
 
-var activeButton = document.querySelector(".control-btn.active");
+if (activeSlide) {
+  activeSlide.classList.remove("current");
+  activeSlide.classList.add("active");
 
-var sliderButtons = document.querySelectorAll(".control-btn");
-for (var i = 0; i < sliderButtons.length; i++) {
-  sliderButtons[i].addEventListener("click", function(event) {
+  var activeButton = document.querySelector(".control-btn.active");
 
-    event.preventDefault();
-    if (this==activeButton) return false;
+  var sliderButtons = document.querySelectorAll(".control-btn");
+  for (var i = 0; i < sliderButtons.length; i++) {
+    sliderButtons[i].addEventListener("click", function(event) {
 
-    activeSlide.classList.remove("active");
-    activeSlide = document.querySelector(".slider-content[data-number='" + this.dataset.number + "']");
-    activeSlide.classList.add("active");
+      event.preventDefault();
+      if (this==activeButton) return false;
 
-    activeButton.classList.remove("active");
-    this.classList.add("active");
-    activeButton = this;
+      activeSlide.classList.remove("active");
+      activeSlide = document.querySelector(".slider-content[data-number='" + this.dataset.number + "']");
+      activeSlide.classList.add("active");
 
-  });
+      activeButton.classList.remove("active");
+      this.classList.add("active");
+      activeButton = this;
+
+    });
+  }
+}
+
+// обр. связь
+var modal = document.querySelector(".modal");
+
+if (modal) {
+  var infoButton = document.querySelector(".contacts-btn");
+  var feedBlock = modal.querySelector(".feedback");
+  var btnClose = feedBlock.querySelector(".feedback-close");
+
+  function openFeed(e) {
+    e.preventDefault();
+    modal.classList.add("active");
+
+    modal.addEventListener("click", closeFeed);
+    btnClose.addEventListener("click", closeFeed);
+    document.addEventListener('keydown', closeKeydown);
+  }
+
+  function closeFeed(e) {
+    e.preventDefault();
+    modal.classList.remove("active");
+
+    modal.removeEventListener("click", closeFeed);
+    btnClose.removeEventListener("click", closeFeed);
+    document.removeEventListener('keydown', closeKeydown);
+  }
+
+  function closeKeydown(e) {
+    if (e.which == 27) {
+      closeFeed(e);
+  	}
+  }
+
+  infoButton.addEventListener("click", openFeed);
+
+  feedBlock.addEventListener("click", function(e) {
+    e.stopPropagation();
+  }, false);
 }
 
 // карта
